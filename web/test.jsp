@@ -37,7 +37,7 @@
         
         <h2>Teste de conhecimento Vingadores</h2><br/>
         
-        <form action="test2.jsp">
+        <form action="resultQuiz.jsp">
             
             <%for(Question q: Db.getMathQuiz ()){%>
             

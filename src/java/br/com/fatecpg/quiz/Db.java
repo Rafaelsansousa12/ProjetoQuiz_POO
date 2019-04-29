@@ -15,15 +15,15 @@ public class Db {
     public static ArrayList<Question> getMathQuiz(){
         ArrayList<Question> quiz = new ArrayList<>();
         quiz.add(new Question("Como o time de heróis,Vingadores, é conhecido ?","Os super-heróis mais Poderosos da Terra", new String[] {"Heróis Unidos.","Heróis da Terra.","Era de Ultron","Os super-heróis mais Poderosos da Terra","Maiores Heróis"}));
-        quiz.add(new Question("Qual foi o primeiro gol de falta da Copa do Mundo 2014?","Dzemaili da Suíça, contra a França.", new String[] {"Dzemaili da Suíça, contra a França.","David Luiz do Brasil, contra a Colômbia.","David Luiz do Brasil, contra o Chile.","Messi da Argentina, contra a Nigéria.","Dzemaili da Suíça contra o Equador."}));
-        quiz.add(new Question("Quais seleções tiveram o primeiro empate com nenhum gol no placar na Copa?","Irã e Nigéria.", new String[] {"Brasil e México.","Japão e Grécia.","Rússia e Coréia do Sul.","Costa Rica e Inglaterra.","Irã e Nigéria."}));
-        quiz.add(new Question("Quem foi o maior artilheiro da Copa?","James Rodríguez, camisa 10 da Seleção Colombiana.", new String[] {"Neymar Jr, camisa 10 da Seleção Brasileira.","Lionel Messi, camisa 10 da Seleção Argentina.","James Rodríguez, camisa 10 da Seleção Colombiana.","Arjen Robben, camisa 11 da Seleção Holandesa.","Thomas Mueller, camisa 13 da Seleção Alemã."}));
-        quiz.add(new Question("Qual foi a primeira seleção a ser eliminada da copa?","Espanha.", new String[] {"Suíça.","França.","Espanha.","Holanda.","Brasil."}));
-        quiz.add(new Question("Jorge Sampaoli foi o técnico de qual seleção?","Chile.", new String[] {"Argentina.","Bélgica.","Chile.","Alemanha.","Espanha."}));
-        quiz.add(new Question("A Itália foi eliminada:","Na fase de grupos.", new String[] {"Nas quartas de final.","Nas oitavas de final.","Nas semi-finais.","Na fase de grupos.","Na final."}));
-        quiz.add(new Question("Luis Suárez do Uruguai, mordeu pela terceira vez um adversário em campo, este foi","Chiellini, da Itália.", new String[] {"Balotelli, da Itália.","Zuniga, da Colômbia.","Óscar Duarte, da Costa Rica.","Debuchy, da França.","Chiellini, da Itália."}));
-        quiz.add(new Question("O jogador conhecido por \"simular pênaltis\" é:","Robben, Holanda.", new String[] {"Fred, Brasil.","Xabi Alonso, Espanha.","Robben, Holanda.","Diego Costa, Espanha.","Valbuena, França."}));
-        quiz.add(new Question("Qual foi o primeiro jogo que acabou em pênaltis?","Brasil e Chile.", new String[] {"Holanda e Argentina.","Grécia e Costa Rica.","Brasil e Chile.","México e Holanda.","Brasil e Colômbia."}));
+        quiz.add(new Question("As joias da Manopla de Thanos são:","Joias do Infinito", new String[] {"Joias do Tempo.","Joias do Finito","Joias da Realidade","Joias do Infinito","Joias do Poder"}));
+        quiz.add(new Question("Qual é o nome do pai de Thanos?","Allars.", new String[] {"Starfox.","Allars.","Galatos."}));
+        quiz.add(new Question("Qual armadura o homem de ferro usou em VINGADORES UTIMATO?","Mark85", new String[] {"Mark85","Mark50","Mark42","Mark."}));
+        quiz.add(new Question("Do que é feito o escudo do Capitão América?","Vibraniun", new String[] {"Alluminiun","Admantiun","Kevlar","Vibraniun"}));
+        quiz.add(new Question("Quantas vezes o Dr. Stranho viu o futuro em vingadores guerra infinita?","14.000.605", new String[] {"14.000.655","14.000.605","14.000.750","25.000"}));
+        quiz.add(new Question("Que jóia o Thor recuperou em Thor mundo sombrio?","Aether", new String[] {"Aether","Tesserect","Orby","Filosofal"}));
+        quiz.add(new Question("Do que é feito o traje do Pantera Negra?","Vibraniun", new String[] {"Nanotecnologia","Vibraniun","Fibra de Metalkotate"}));
+        quiz.add(new Question("Qual personagem abaixo é o primeiro Vingador?","Steve Rogers(Capitão América)", new String[] {"Nick Furry","Tony Stark(Homem de Ferro)","Natasha Romanoff","Steve Rogers(Capitão América)","Thor"}));
+        quiz.add(new Question("A frase: \"Gênio, Bilionário, Playboy e Filantropo\", é dita por qual personagem e em qual filme?","Tony Stark - Os Vingadores.", new String[] {"Capitão América - Os Vingadores","Gavião Arqueiro - Os Vingadores","Tony Stark - Os Vingadores","Viúva Negra - Os Vingadores.","Homem de Ferro - Os Vingadores 2."}));
         return quiz;
     }
     
