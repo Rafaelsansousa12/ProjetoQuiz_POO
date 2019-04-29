@@ -1,0 +1,43 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 28/04/2019, 21:14:21
+    Author     : Rafael Sousa
+*/
+
+.bodyhome{
+        background-size: cover;
+        width: 100%; /* com isso imagem ocupará toda a largura da tela. Se colocarmos height: 100% também, a imagem irá distorcer */
+        position: absolute;
+    }
+    
+    .fonte
+    {
+         color: #CEECF5;
+         text-align: center;
+            
+    }
+    
+    
+    .button:hover {
+      opacity: 0.4;
+     background-color: #0431B4;
+     color: #CEECF5;
+      text-align: center;
+    
+}
+
+button a
+{
+   
+     color: #CEECF5;
+}
+ 
+button a:hover
+{
+    text-decoration: none;
+     color: #CEECF5;
+}
