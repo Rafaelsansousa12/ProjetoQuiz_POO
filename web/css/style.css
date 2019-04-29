@@ -8,11 +8,19 @@ and open the template in the editor.
     Author     : Rafael Sousa
 */
 
-.bodyhome{
+body{
+        
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
         background-size: cover;
         width: 100%; /* com isso imagem ocupará toda a largura da tela. Se colocarmos height: 100% também, a imagem irá distorcer */
         position: absolute;
+        
+      
     }
+    
+    
     
     .fonte
     {

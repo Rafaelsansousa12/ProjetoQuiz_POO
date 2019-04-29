@@ -37,9 +37,9 @@
         
     </head>
     
-    <body class="bodyhome" background="img/avengers.jpg" >
+    <body class="bodyhome"  background="img/avengers.jpg" >
         
-        <div class="container">
+        <div class="container" >
         
         <%
             String usuario = (String) session.getAttribute("usuario");
@@ -47,14 +47,15 @@
          
               <h1 class="fonte">QUIZ VINGADORES</h1><br/><br/><br/>
               
-              <div class="col-sm-12">
+              <div class="row" >
+              <div class="col-sm-12" >
         
         
         <%if(request.getParameter("MathTest")==null){%>
         
         <button class="btn btn-default btn-block btn-lg  button" ><a href="login.jsp">LOGIN</a> </button><br/>
-        <button class="btn btn-default btn-block btn-lg  button" ><a href="login.jsp">TESTES RECENTES</a> </button><br/>
-        <button class="btn btn-default btn-block btn-lg  button" ><a href="login.jsp">RANKING</a></button><br/>
+        <button class="btn btn-default btn-block btn-lg  button" ><a href="recentes.jsp">TESTES RECENTES</a> </button><br/>
+        <button class="btn btn-default btn-block btn-lg  button" ><a href="ranking.jsp">RANKING</a></button><br/>
         
         
         <%}else{%>
