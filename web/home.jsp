@@ -14,7 +14,7 @@
 <!DOCTYPE html>
 <%
     double grade = 0.0;
-    if(request.getParameter("MathTest")!=null){
+    if(request.getParameter("QuizTest")!=null){
         int correctAnswers = 0;
         for(Question q: Db.getMathQuiz()){
             String userAnswer = request.getParameter(q.getQuestion());
@@ -53,7 +53,7 @@
               <div class="col-sm-12" >
                   
         
-        <%if(request.getParameter("MathTest")==null){%>
+        <%if(request.getParameter("QuizTest")==null){%>
         
         <button class="btn btn-default btn-block btn-lg  button" ><a href="login.jsp">LOGIN</a> </button><br/>
         <button class="btn btn-default btn-block btn-lg  button" ><a href="recentes.jsp">TESTES RECENTES</a> </button><br/>
