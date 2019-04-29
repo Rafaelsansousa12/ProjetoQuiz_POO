@@ -20,13 +20,15 @@
         
     </head>
     
-    <body>
+    <body class="bodyhome"  background="img/avengers_login.jpg" >
         
-        <form action="login.jsp" method="post">
+        <h1 class="form">QUIZ VINGADORES</h1><br/><br/><br/>
+        
+        <form action="login.jsp" method="post" class="form">
             
             Usuário: <br/><input type="text" name="usuario" /><br/>
             
-            <input type="submit" value="Logar"/>
+            <input type="submit" class="btn btn-primary" value="LOGAR">
             
         </form>
         
