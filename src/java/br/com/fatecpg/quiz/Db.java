@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class Db {
     public static ArrayList<Question> getMathQuiz(){
         ArrayList<Question> quiz = new ArrayList<>();
-        quiz.add(new Question("Qual jogador marcou o primeiro gol da Copa do Mundo 2014?","Marcelo, Seleção Brasileira.", new String[] {"Neymar, Seleção Brasileira.","Modric, Seleção Croata.","Oscar, Seleção Brasileira.","Marcelo, Seleção Brasileira.","Van Persie, Seleção Holandesa."}));
+        quiz.add(new Question("Como o time de heróis,Vingadores, é conhecido ?","Os super-heróis mais Poderosos da Terra", new String[] {"Heróis Unidos.","Heróis da Terra.","Era de Ultron","Os super-heróis mais Poderosos da Terra","Maiores Heróis"}));
         quiz.add(new Question("Qual foi o primeiro gol de falta da Copa do Mundo 2014?","Dzemaili da Suíça, contra a França.", new String[] {"Dzemaili da Suíça, contra a França.","David Luiz do Brasil, contra a Colômbia.","David Luiz do Brasil, contra o Chile.","Messi da Argentina, contra a Nigéria.","Dzemaili da Suíça contra o Equador."}));
         quiz.add(new Question("Quais seleções tiveram o primeiro empate com nenhum gol no placar na Copa?","Irã e Nigéria.", new String[] {"Brasil e México.","Japão e Grécia.","Rússia e Coréia do Sul.","Costa Rica e Inglaterra.","Irã e Nigéria."}));
         quiz.add(new Question("Quem foi o maior artilheiro da Copa?","James Rodríguez, camisa 10 da Seleção Colombiana.", new String[] {"Neymar Jr, camisa 10 da Seleção Brasileira.","Lionel Messi, camisa 10 da Seleção Argentina.","James Rodríguez, camisa 10 da Seleção Colombiana.","Arjen Robben, camisa 11 da Seleção Holandesa.","Thomas Mueller, camisa 13 da Seleção Alemã."}));

@@ -29,6 +29,13 @@ body{
             
     }
     
+    .fontetest
+    {
+         color: #DF013A;
+         text-align: left;
+            
+    }
+    
     
     .button:hover {
       opacity: 0.4;
