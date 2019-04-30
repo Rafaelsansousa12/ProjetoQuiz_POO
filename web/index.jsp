@@ -34,7 +34,7 @@
                     <div class="div1 ">
                         
                         <img width="250" height="250" src="img/Rafa.jpg" alt=""  >
-                        <h4>Rafael Sousa - Front-End</h4>
+                        <h4>Rafael Sousa </h4>
                     </div>
                     
                 </div>
@@ -44,7 +44,7 @@
                     <div class="div1 container "  id="row" >
                         
                         <img width="200" height="250" src="img/Fernando.jpeg" alt="" class="img-responsive">
-                        <h4>Fernando Pedrozo - Back-End</h4>
+                        <h4>Fernando Pedrozo</h4>
                     </div>
                     
                     

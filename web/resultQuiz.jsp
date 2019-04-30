@@ -1,71 +1,96 @@
-<%-- 
-    Document   : index
-    Created on : 23/04/2019, 21:55:00
-    Author     : a
---%>
 
-<%@page import="br.com.fatecpg.quiz.Question"%>
+<%@page import="br.com.fatecpg.quiz.Ranking"%>
+<%@page import="java.util.Collections"%>
+<%@page import="br.com.fatecpg.quiz.Score"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.text.DecimalFormat"%>
 <%@page import="br.com.fatecpg.quiz.Db"%>
+<%@page import="br.com.fatecpg.quiz.Question"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<%
+    DecimalFormat df = new DecimalFormat("#.##");
+    DecimalFormat df2 = new DecimalFormat("0.00");
+    double lastGrade = 100.0 * Db.getLastGrade();
+    double averageGrade = 100.0 * Db.getGradeAverage();
+%>
 
 <!DOCTYPE html>
-<%
-    double grade = 0.0;
-    if(request.getParameter("MathTest")!=null){
-        int correctAnswers = 0;
-        for(Question q: Db.getMathQuiz()){
-            String userAnswer = request.getParameter(q.getQuestion());
-            if(userAnswer !=null){
-                if(q.getAnswer().equals(userAnswer)){
-                    correctAnswers++;
-                }
-            }
-        }
-        grade=(double)correctAnswers/ (double)Db.getMathQuiz().size();
-    }
-%>
 <html>
-    
     <head>
         
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="css/style.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         
-        <title>Usuário</title>
+        <title>WebQuiz</title>
         
     </head>
     
-    <body class="img-responsive "  background="img/avengers_resultquiz.jpg ">
+    <body>
         
-        <%
-            String usuario = (String) session.getAttribute("usuario");
-        %>
-        
-        <h1 class="fonte"  > QUIZ VINGADORES</h1><br/><br/>
-        
-        <div class="fontetest">
+        <div class="backgroundImage">
             
-        <h2>Resultado:</h2><br/>      
-        
-        <%if(request.getParameter("MathTest")==null){%>
-            <h3>Clique <a href="login.jsp">aqui</a> para <u>logar</u></h3><br/>
-            
-            <h2>Ultimos 10 testes</h2><br/>
-            
-            <h2>Ranking</h2>
-            
-        <%}else{%>
-        
-        <h3><%=usuario%>, sua nota foi <u><%=100*grade%>%</u></h3>
-        
+            <div class="container">
+                
+
+                
+                
+                <% 
+                    String usuario = request.getParameter("name");
+                    if(usuario != null && !usuario.isEmpty()){
+                        session.setAttribute("usuario",usuario);
+                        response.sendRedirect("test.jsp");
+                    }
+                %>
+                               
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3 class="ultimaNota">Última nota:</h3>
+                        <% if(lastGrade != 0 && lastGrade>0){ %>
+                            <h4 class="ultimaNotaValor"><%= df.format(lastGrade)%>%</h4>
+                        <% }%>
+                        
+                    </div>
+
+                    <div class="col-md-6">
+                        <h3 class="media">Média</h3>
+                        <% if(averageGrade != 0 && averageGrade>0){ %>
+                        <h4 class="mediaValor"><%= df.format(averageGrade)%>%</h4>
+                        <% }%>
+                    </div>
+
+                </div>
+
+                <div class="table col-md-5">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th id="titleTable" colspan="2"><h3 class="ranking">Ranking</h3></th>
+                            </tr>                 
+                            <tr>
+                                <th>Pontuação</th>
+                                <th>Jogador</th>
+                            </tr>
+                        </thead>           
+                        <tbody class="pontuacaoJogadores">
+                            <%
+                                        ArrayList<Score> ranking = Score.ranking;
+                                        Collections.sort(ranking, new Ranking());
+                                        for (Score score : ranking) {%>
+                                        <tr>
+                                        <td><%= df2.format(score.getScore())%></td>
+                                        <td><%= score.getPlayer().getNome()%></td>
+                                    </tr>
+                            <%}%>
+                        </tbody>
+                    </table>
+                </div>                                     
+            </div>
         </div>
-        
-             <br/><br/><br/><button class="btn btn-default btn-block btn-lg  button" ><a href="test.jsp">NOVO TESTE</a> </button>          
-            <button class="btn btn-default btn-block btn-lg  button" ><a href="deslogar.jsp">SAIR</a> </button><br/>
-        
-        <%}%>
-        
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+                
+                
+       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </body>
 </html>

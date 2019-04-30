@@ -23,6 +23,16 @@
     <body class="img-responsive "  background="img/avengers_homeuser.jpg ">
         <h1 class="fonte">QUIZ VINGADORES</h1><br/>
         
+        <div class="col-md-2 inputname">
+                    <div class="row">
+                        <form action="test.jsp">
+                            <label>Jogador 1: </label>                     
+                            <input type="text" id="inputname" name="name" class="form-control input-md" placeholder="Digite o seu nome..." required />
+                            <input class="btn btn-warning comecarTeste" type="submit" value="Começar Quiz">                    
+                        </form>
+                    </div>
+                </div>
+        
         <div class="fontetest">
         <%
             String usuario = (String) session.getAttribute("usuario");

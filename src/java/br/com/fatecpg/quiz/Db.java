@@ -5,6 +5,7 @@
  */
 package br.com.fatecpg.quiz;
 
+
 import java.util.ArrayList;
 
 /**
@@ -12,8 +13,13 @@ import java.util.ArrayList;
  * @author a
  */
 public class Db {
+    private static int testsCount = 0;
+    private static double testsGradeSum = 0.0;
+    private static double lastGrade = 0.0;
+    public static ArrayList<Question> quiz;
+    
     public static ArrayList<Question> getMathQuiz(){
-        ArrayList<Question> quiz = new ArrayList<>();
+         quiz = new ArrayList<>();
         quiz.add(new Question("Como o time de heróis,Vingadores, é conhecido ?","Os super-heróis mais Poderosos da Terra", new String[] {"Heróis Unidos.","Heróis da Terra.","Era de Ultron","Os super-heróis mais Poderosos da Terra","Maiores Heróis"}));
         quiz.add(new Question("As joias da Manopla de Thanos são:","Joias do Infinito", new String[] {"Joias do Tempo.","Joias do Finito","Joias da Realidade","Joias do Infinito","Joias do Poder"}));
         quiz.add(new Question("Qual é o nome do pai de Thanos?","Allars.", new String[] {"Starfox.","Allars.","Galatos."}));
@@ -24,7 +30,35 @@ public class Db {
         quiz.add(new Question("Do que é feito o traje do Pantera Negra?","Vibraniun", new String[] {"Nanotecnologia","Vibraniun","Fibra de Metalkotate"}));
         quiz.add(new Question("Qual personagem abaixo é o primeiro Vingador?","Steve Rogers(Capitão América)", new String[] {"Nick Furry","Tony Stark(Homem de Ferro)","Natasha Romanoff","Steve Rogers(Capitão América)","Thor"}));
         quiz.add(new Question("A frase: \"Gênio, Bilionário, Playboy e Filantropo\", é dita por qual personagem e em qual filme?","Tony Stark - Os Vingadores.", new String[] {"Capitão América - Os Vingadores","Gavião Arqueiro - Os Vingadores","Tony Stark - Os Vingadores","Viúva Negra - Os Vingadores.","Homem de Ferro - Os Vingadores 2."}));
+        
+        
         return quiz;
     }
     
+     public static double validateTest(String userAnswers[]){
+ 
+        int count = 0;
+        for(int i=0; i<quiz.size(); i++){
+            if(quiz.get(i).getAnswer().equals(userAnswers[i])){
+                count++;
+            }
+        }
+        double grade = (double)count / (double)quiz.size();
+        Db.lastGrade = grade;
+        Db.testsGradeSum += grade;
+        Db.testsCount++;
+        return grade;
+    }
+
+   public static double getLastGrade(){
+        return Db.lastGrade;
+    }
+    
+    public static double getGradeAverage(){
+        return Db.testsGradeSum / (double)Db.testsCount;
+    }
 }
+    
+
+
+
