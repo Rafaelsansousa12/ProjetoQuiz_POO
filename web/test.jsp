@@ -20,24 +20,26 @@
         
         <title>Teste - WebQuiz</title>
         
+        
+        
     </head>
     
-    <body background="img/avengers_test.jpg " class="fontetest">
+    <body  background="img/avengers_test.jpg" class="fontetest"  >
         
         <%
             String usuario = (String) session.getAttribute("usuario");
             if(usuario==null){
                 response.sendRedirect("login.jsp");
             } else {
-                out.print("<h3>Usuário logado: "+usuario+"<h3><br/>");
+                out.print("<h3>Jogador: "+usuario+"<h3><br/>");
             }
         
         %>
         <h1 class="fonte">WEBQUIZ</h1><br/>
         
-        <h2>Teste de conhecimento Vingadores</h2><br/>
+        <h2 class="fonte">TESTE DE CONHECIEMENTO VINGADORES</h2><br/>
         
-        <form action="resultQuiz.jsp">
+        <form action="resultQuiz.jsp" class="test">
             
             <%for(Question q: Db.getMathQuiz ()){%>
             
@@ -57,7 +59,8 @@
         <input type="submit" class="btn btn-danger" name="MathTest" value="Enviar"/>
         
         </form>
-        
+     
          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    </body>
+    
+        </body>
 </html>

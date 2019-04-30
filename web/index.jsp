@@ -19,9 +19,9 @@
         
     </head>
     
-    <body>
+    <body  class="img-responsive fonte"  background="img/662697.jpg">
         
-        <h1>PROJETO 04 POO</h1><br/>
+        <h1>GRUPO 05 </h1><br/>
         
         <div class="container ">
         
@@ -30,7 +30,8 @@
                     
                     <div class="div1">
                         
-                        <img width="280" height="250" src="img/Rafa.jpg" alt="">
+                        <img width="250" height="250" src="img/Rafa.jpg" alt="" class="img-responsive" >
+                        <h4>Rafael Sousa - Front-End</h4>
                     </div>
                     
                 </div>
@@ -39,7 +40,8 @@
                     
                     <div class="div1">
                         
-                        <img width="280" height="250" src="img/Rafa.jpg" alt="">
+                        <img width="220" height="250" src="img/Fernando.jpeg" alt="" class="img-responsive">
+                        <h4>Fernando Pedrozo - Back-End</h4>
                     </div>
                     
                 </div>
@@ -48,7 +50,7 @@
             
             </div>
         
-        <h2>Ir para <u> <a href="home.jsp">Home</a></u></h2><br/><br/>
+        <h2>  <a href="home.jsp">Home</a></h2><br/><br/>
         
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         

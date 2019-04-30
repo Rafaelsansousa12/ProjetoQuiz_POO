@@ -29,11 +29,11 @@ body{
             
     }
     
-    .fontetest
+    .fontetest 
     {
-         color: #DF013A;
+         color: #DF013A ;
          text-align: left;
-            
+        
     }
     
     
@@ -83,9 +83,19 @@ button a:hover
     top: 30px;
     padding-top: 20px;
     padding-left: 20px;
-    border-radius: 10px;
-    	
-   
-
+    border-radius: 10px;   	
         
    }
+   
+   .input
+   {
+       border-radius: 5px;
+   }
+   
+   .teste
+            {
+                background-image:url(img/avengers_test.jpg) ;
+                
+            }
+   
+  

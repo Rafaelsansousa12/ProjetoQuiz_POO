@@ -29,7 +29,7 @@
         <form action="login.jsp" method="post" >
             
             <div class="form">
-            <br/><input type="text" name="usuario" placeholder="Digite seu nome..." /><br/>
+                <br/><input type="text" name="usuario" placeholder="Digite seu nome..." class="input"  /><br/><br/>
             
             <input type="submit" class="btn btn-primary" value="LOGAR" >
             </div>
