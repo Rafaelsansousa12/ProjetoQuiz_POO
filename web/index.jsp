@@ -6,6 +6,9 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
 <!DOCTYPE html>
 
 <html>
@@ -28,9 +31,9 @@
          <div class="row">
                 <div class="col-sm-6 " >
                     
-                    <div class="div1">
+                    <div class="div1 ">
                         
-                        <img width="250" height="250" src="img/Rafa.jpg" alt="" class="img-responsive" >
+                        <img width="250" height="250" src="img/Rafa.jpg" alt=""  >
                         <h4>Rafael Sousa - Front-End</h4>
                     </div>
                     
@@ -38,11 +41,13 @@
              
                 <div class="col-sm-6">
                     
-                    <div class="div1">
+                    <div class="div1 container "  id="row" >
                         
-                        <img width="220" height="250" src="img/Fernando.jpeg" alt="" class="img-responsive">
+                        <img width="200" height="250" src="img/Fernando.jpeg" alt="" class="img-responsive">
                         <h4>Fernando Pedrozo - Back-End</h4>
                     </div>
+                    
+                    
                     
                 </div>
              
