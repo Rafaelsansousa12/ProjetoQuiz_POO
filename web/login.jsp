@@ -20,20 +20,29 @@
         
     </head>
     
-    <body class="bodyhome"  background="img/239139.jpg" >
+    <body class="img-responsive "  background="img/239139.jpg" >
         
-        <div class="form2">
-        <h1 >QUIZ VINGADORES</h1><br/><br/><br/>
-        </div>
+        <div class="container" >
+            
         
+        
+             <div class="row" >
+              <div class="col-sm-6 form2" >
+                  
+                  
+                  <h1 >QUIZ VINGADORES</h1><br/><br/>
+      
+                  
         <form action="login.jsp" method="post" >
             
-            <div class="form">
-                <br/><input type="text" name="usuario" placeholder="Digite seu nome..." class="input"  /><br/><br/>
+         
+                <br/><input type="text" name="usuario" placeholder="Digite seu nome..." class="input"   /><br/><br/>
             
             <input type="submit" class="btn btn-primary" value="LOGAR" >
+             </form>
             </div>
-        </form>
+            </div>
+       
         
         <%
         String usuario = request.getParameter("usuario");
@@ -43,8 +52,8 @@
         }
         %>
         
-      <br/> <br/><br/><br/><br/><button class="btn btn-default btn-block btn-lg  button" ><a href="deslogar.jsp">SAIR</a> </button><br/>
-        
+      <br/><br/><button class="btn btn-default btn-block btn-lg  button" ><a href="deslogar.jsp">SAIR</a> </button><br/>
+        </div>
          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </body>
 </html>

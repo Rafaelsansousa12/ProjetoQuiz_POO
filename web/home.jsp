@@ -38,7 +38,7 @@
         
     </head>
     
-    <body class="bodyhome"  background="img/avengers.jpg" >
+    <body class="img-responsive "  background="img/avengers.jpg" >
         
         <div class="container" >
         
